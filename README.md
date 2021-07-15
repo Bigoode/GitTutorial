@@ -4,21 +4,19 @@
 
 - [Link com os downloads](https://git-scm.com/downloads)
 
-### Verificando versão GIT e se o memsmo foi corretamente intalado
+## Verificando versão do GIT e se o mesmo foi corretamente instalado
 
 - Abra o prompt de comando (_cmd_)
-  <p>
-  Para acessar o prompt de comando, você pode pressionar ao mesmo tempo as teclas WINDOWS + R para abrir a janela "executar. Aí é só digitar CMD na barra de pesquisa e clicar em "Enter".
+
+  Para acessar o prompt de comando, você pode pressionar ao mesmo tempo as teclas _WINDOWS + R_ para abrir a janela "executar". Aí é só digitar _CMD_ na barra de pesquisa e clicar em "Enter".
   <br>
-  Outra opção nos é digitar CMD diretamente na barra de pesquisa, ao lado do botão Iniciar na barra de tarefas.
-  </p>
+  Outra opção é digitar _CMD_ diretamente na barra de pesquisa, ao lado do botão Iniciar na barra de tarefas.
 
 - Digite `git --version`
-  <p>
+
   Se aparecer a versão e por que foi instalado corretamemte.
-  <br>
-  ex: `git version 2.31.1.windows.1`.
-  </p>
+
+  - ex: `git version 2.31.1.windows.1`.
 
 ## Criando um novo projeto
 
@@ -27,199 +25,223 @@
 - Abra o VSCode nessa pasta
 
 - Crie um novo arquivo `README.md`
-  <p>
-  <em>.md</em> é a exentção Markdown, que é uma linguem de marcação.
-  <br>
-  ex: `echo "#TituloDaPagina">> README.md`.
-  </p>
+
+  - ex: `echo "#TituloDaPagina">> README.md`.
+
+  _.md_ é a exentção Markdown, que é uma linguem de marcação.
 
 - Escreva algo dentro dele
 
-  ex: Usando o Git e Github na prática
+  - ex: Usando o Git e Github na prática
 
 - Salve o arquivo
 
-### Usando o Git
+## Usando o Git
 
-- Abra o Git Bash que foi instalado na máquina, ou utilize o terminal do VSCode.
+- Abra o Git Bash que foi instalado na sua máquina, ou utilize o terminal do VSCode.
 
 - Vá até o diretório da pasta
 
-  ex: `cd DiretórioDaPasta`
+  - ex: `cd DiretórioDaPasta`
 
 - Digite o comando `git init` para inicializar o repositório
 
   Foi criada uma pasta `.git` e é ali que todo acontece, então não apague-a!
 
-- Digite o comando `git add README.md` para colocar o arquivo na área de stagging
+- Digite o comando `git add README.md` para colocar o arquivo na área de stagging ou `git add .` para colocar todos os arquivos na área de stagging
 
   <img src="https://i1.wp.com/www.markus-gattol.name/misc/mm/si/content/git_git_add.png">
 
-- Esse `add` é necessário antes de darmos o commit de fato, mas por que isso? No final do vídeo explico para vocês
+- Esse `add` é necessário antes de darmos o commit de fato
 
 - Digite o comando `git status` para verificar o status do arquivo
-  Verifica quais os estados que os arquivos estão. Se existe algum arquivo modificado, adiciona ou removido
 
-- `git commit -m "primeiro commit"` para de fato dar o commit no repositório
-  <p>
+  O `git status` Verifica quais os estados que os arquivos estão. Se existe algum arquivo modificado, adiciona ou removido
+
+- Dê `git commit -m "primeiro commit"` para de fato dar o commit no repositório
+
   Os commits são as unidades estruturais de um cronograma de projeto Git. Podem ser considerados instantâneos ou marcos ao longo do cronograma de um projeto Git. São criados com o comando `git commi` para capturar o estado de um projeto naquele momento.
-  </p>
 
-- `git branch -M "main"` para alterar o nome da branch principal de `master` para `main` (isso é uma boa prática atualmente recomendada)
-  <p>
-  <em>Branch</em>, em tradução literal, significa “ramo”. No mundo da programação, ela tem o mesmo significado: uma branch é uma ramificação do seu projeto.
-  </p>
+- Dê `git branch -M "main"` para alterar o nome da branch principal de `master` para `main` (isso é uma boa prática atualmente recomendada)
+
+  _Branch_ , em tradução literal, significa “ramo”. No mundo da programação, ela tem o mesmo significado: uma branch é uma ramificação do seu projeto.
 
 ## Interfaces Git
 
-Beleza, recebemos a confirmação de que o commit aconteceu, mas isso tá um pouco abstrato ainda né?
 Existem algumas [interfaces legais do git](https://git-scm.com/downloads/guis) que você pode fazer o download para poder visualizar de fato como está o projeto, o que foi alterado em cada commit, quando foi alterado etc.
-Aqui eu vou mostrar pra vocês a usarem direto no Github.
 
 ## Repositório no Github
 
-- Depois de você ter criado a sua conta na plataforma, você irá em `Criar novo repositório`
+- Crie uma conta na plataforma
 
-Você vai preencher com as informações do projeto, então dar o nome do repositório, colocar uma breve descrição e criar
+- Depois de ter criado a conta na plataforma, você irá em `Criar novo repositório`
 
-<img src="https://media.discordapp.net/attachments/831974152667398214/836828773067915274/unknown.png">
+- Preencha com as informações do projeto,
 
-Logo depois vai aparecer essa página um pouco cinza e confusa e com vários comandos (pode até perceber que alguns deles jpa usamos), mas o que você tem que fazer é bem simples, apenas copie o link que aparecer para você
+  <img src="https://media.discordapp.net/attachments/831974152667398214/836828773067915274/unknown.png">
 
-<img src="https://media.discordapp.net/attachments/831974152667398214/836828905859186708/unknown.png?width=1440&height=141">
+- Logo depois aparecera essa página, apenas copie o link
 
-Lembra do conceito de `remote` que eu expliquei pra vocês no último vídeo? Nós iremos utilizá-lo agora
+  <img src="https://media.discordapp.net/attachments/831974152667398214/836828905859186708/unknown.png?width=1440&height=141">
 
-- Para passar o commit do meu repositório local (da minha máquina) para um repositório na plataforma do Github, usamos o `git remote add origin <link do repositório>`
+- Para passar o _commit_ do repositório local (sua máquina) para um repositório na plataforma do Github, usamos o `git remote add origin <link do repositório>`
 
-- `origin` é o nome utilizado para referenciar o nosso repositório
+  - `git` é para ser feito um comando no _git_
 
-Agora já temos o nosso repositório local conectado com o respositório do Github, porém o `commit` que damos na máquina não sobe automaticamente para a plataforma
+  -`remote` é o a conexão local com o repositório do _GitHub_
+
+  - `add` para adicionar o repositório
+
+  - `origin` é o nome utilizado para referenciar o nosso repositório
+
+- Já temos o um repositório local conectado com o respositório do Github, porém o `commit` que damos na máquina não sobe automaticamente para a plataforma
 
 - Para isso precisaremos empurrar, enviar para lá com o `git push -u origin main`
 
-Agora se recarregarmos a página iremos ver o nosso arquivo aqui na plataforma!
+  - `push` significa empurra
 
-## Alterando e adicionando arquivo
+  - `main` e a branch que queremos salvar
 
-Beleza, agora que temos o nosso repositório no Github configurado direitinho, podemos usar e abusar do que o Git oferece, afinal é pra isso que estamos utilizando ele né?
-Primeira coisa que faremos então é alterar esse arquivo que já commitamos
+- Agora se recarregarmos a página veremos o arquivo na plataforma!
 
-- Adiciona mais uma frase no arquivo `Essa é uma alteração`
+## Alterar é adicionar arquivo
 
-- Além disso iremos criar um novo arquivo `Projeto.md`, onde escreveremos `Esse é o arquivo onde desenvolverei o meu projeto`
+- Adicione alguma alteração no arquivo
 
-- Agora então precisamos subir essa alteração, pra isso seguiremos os mesmos passos de `git add .` (agora ponto `.` pois adiciona todos os arquivos) e `git commit -m "Primeira alteração"`
+  - ex: Adicione a frase no arquivo `Essa é uma alteração`
 
-- Lembrando que para alterar algo no nosso respositório do Github precisamos dar o push, então `git push origin main` (sem o -u)
+- Crie um novo arquivo
 
-Se olharmos agora o nosso código no Github, ele terá sido alterado, e não só isso, se clicarmos no nome do `commit`, podemos ver exatamente as alterações que foram feitas nele.
-O verde com `+` e o vermelho com `-` mostra, os conteúdos que foram adicionados e editados dentro do código.
-Aqui nesse botão poderemos ver todos os commits já feitos anteriormente, então se clicarmos em algum deles, veremos exatamente o que havia sido alterado, além de claro, vermos o código como era. Incrível né?
+  - ex: `Projeto.md`
 
-<img src="https://media.discordapp.net/attachments/831974152667398214/836830443617648670/unknown.png">
+- Escreva algo nele
+
+  - ex: Escreva a frase no arquivo `Esse é o arquivo onde desenvolverei o meu projeto`
+
+- Subir as alterações
+
+  - Dê `git add .` (para dicionara todos os arquivos)
+
+  - Dê `git commit -m "Primeira alteração"`
+
+- Para alterar algo no respositório do Github precisamos dar o push com `git push origin main`
+
+- O código no Github já foio alterado
+
+- Clicando no nome do `commit`, podemos ver exatamente as alterações que foram feitas nele.
+
+  - O verde com `+` e o vermelho com `-` mostra, os conteúdos que foram adicionados e editados dentro do código.
+
+- No botão abaixo pode ser visto todos os commits já feitos anteriormente, se clicar em algum deles, pode ser visto o que havia sido alterado, além de, vermos o código como era.
+
+  <img src="https://media.discordapp.net/attachments/831974152667398214/836830443617648670/unknown.png">
 
 ## Branch
 
-Até agora tudo o que fizemos de alterações e mandamos de commit, foi na nossa `main`, que é aquela linha do tempo principal.
-Agora vou mostrar pra vocês como criamos uma branch e depois como que juntamos ela com o código que já está na `main` (lembrando que ela é uma linha cronológica adicional/alternativa a principal)
-E outra, a branch pode ser criada tanto para quando você for fazer uma alteração em um arquivo, quando para adicionar outro arquivo dentro do projeto ou mesmo excluir.
-<br>
-Obs. _Lembrem que eu estou aqui editando um arquivo markdown, porém isso tudo vale para qualquer tipo de arquivo com qualquer extensão_
+    "Branch" , em tradução literal, significa “ramo”. No mundo da programação, ela tem o mesmo significado: uma branch é uma ramificação do seu projeto.
 
-- Nesse caso vamos adicionar um novo arquivo para desenvolver a nossa feature `Botão`
+- Até agora só alteramos e mandamos de o commit, na `main`, que é aquela linha do tempo principal.
 
-- Então a primeira coisa que fazemos é `git checkout -b "novo-botao"`, assim criando uma branch para ele
-  Esse comando além de criar a branch já entra nela com o checkout, inclusive se olharmos agora aqui no meu VSCode, estamos dentro dela.
+- Agora vamos criar uma branch e depois juntar ela ao código que já está na `main` (ela é uma linha cronológica adicional/alternativa a principal)
 
-- Vou então criar o arquivo, criar o `botão.md` "aqui eu crio o botão"
+  - A branch pode ser criada tanto para quando você for fazer uma alteração em um arquivo, quando para adicionar outro arquivo dentro do projeto ou mesmo excluir.
 
-- E agora fazemos o passo a passo que já sabemos, colocamos a nossa alteração em stagging com o `git add .` e commitamos com o `git commit -m "novo botão"`
+- Vamos adicionar um novo arquivo
 
-- Para enviarmos agora que vai ser diferente. Vocês lembram que utilizávamos o `git push orgin main` né? Porém main era aquela branch principal. Agora então usaremos `git push origin botao`
+  - ex: desenvolver feature (característica) `Botão`
 
-Agora se olharmos o nosso Github, veremos que tem 2 branches, a `main` e a `botao`
+- Dê `git checkout -b "NomeDaBracsh"`, assim criando uma nova _branch_
 
-<img src="https://media.discordapp.net/attachments/812313742192279612/836820670037622854/unknown.png">
+  - ex: `git checkout -b "botao"`
 
-Vamos supor que eu ainda não tivesse terminado de desenvolver o botão, eu poderia continuar tranquilamente na branch `botao` até terminar!
+  - Esse comando além de criar a branch já entra nela com o checkout
 
-Mas Rafa, e se eu precisasse por algum motivo voltar naquela branch `main` e desenvolver a partir do que deixei lá? Sem problemas, a única coisa que você precisa fazer nesse caso é `git checkout main`, e pra voltar depois é só `git checkout botao` novamente
+- crie um o arquivo,
 
-Beleza! Agora desenvolvi tudo o que queria aqui na branch `botao`, como que junto ela com a main sem problemas?
+  - ex: `botão.md` "aqui eu crio o botão"
+
+- coloque a alteração em stagging com o `git add .` e commite com o `git commit -m "botao"`
+
+- Para enviarmos agora usaremos `git push origin botao` (não será mais`git push orgin main`, pois mudamos de branch, _main_ era branch principa)
+
+- Agora o nosso Github, tem 2 branches, a `main` e a `botao`
+
+  <img src="https://media.discordapp.net/attachments/812313742192279612/836820670037622854/unknown.png">
+
+- Vamos supor que o desenvolvimento do botão ainda não estivese terminado, assim poderia retomar tranquilamente na branch `botao` até terminar!
+
+- Se for preciso voltar na branch `main` e desenvolver a partir do ponto que parou basta dar `git checkout main`, e pra voltar para branch `botao` é só dar `git checkout botao`
 
 ## Merge
 
-- Agora o que precisamos fazer é ir para a nossa branch principal `git checkout main` e lá faremos o merge com a branch `botao` que criamos, com `git merge botao`
+    Merge -> Unir
+    Mesclagem é o jeito do Git de unificar um histórico bifurcado. O comando git merge permite que você pegue as linhas de desenvolvimento independentes criadas pelo git branch e as integre em uma ramificação única.
 
-Pronto, agora tudo o que tinha de alteração na branch `botao` juntou com a `main`
+- Juntando a branch `main` com a branch `botao`, após acabar o desenvolvimento na branch `botao`
 
-- Para finalizar então, vamos jogar lá no Github isso tudo com o `git push origin main`
+- Entre na branch principal `git checkout main` e lá será feito o _merge_ com a branch `botao`, dê `git merge botao`
+
+- Agora toda a alteração na branch `botao` juntou com a `main`
+
+- Agora dê o _push_ para mande tudo para o Github com `git push origin main`
 
 ## Clone
 
-Como vocês podem baixar meu código?
+- Ao entrar em um repositório, seu ou de outra pessoa, terá esse botão `Code`, que quando você clica aparece um link:
 
-Sempre que você entrar em um repositório, seja o seu ou o de qualquer outra pessoa, terá esse botão `Code`, que quando você clica aparece um link:
+  <img src="https://media.discordapp.net/attachments/812313742192279612/836823564513705994/unknown.png">
 
-<img src="https://media.discordapp.net/attachments/812313742192279612/836823564513705994/unknown.png">
+- Você irá copiar esse link e levar ele para o terminal
 
-- Você irá copiar esse link e levar ele lá pro nosso terminal
+- O comando para puxar o projeto para a sua máquina é o `git clone linkDoRepositório`
 
-- O comando para puxar o projeto para a sua máquina é o `git clone https://github.com/rafaballerini/GitTutorial.git`
-
-Não é necessário criar um repositório antes disso, como fizemos anteriormente com o `git init`. Dessa vez, basta abrir o terminal e clonar o projeto e tudo aparecerá!
+  - Não é necessário criar um repositório antes disso, como o `git init`. Basta abrir o terminal e clonar o projeto e tudo aparecerá!
 
 ## Pull
 
-E se eu fizer uma alteração no repositório, como vocês podem atualizar na máquina de vocês?
+    Pull -> Puxar
+    O pull request, é o pedido para que o repositório original, ou uma branch do repositório original, faça a ação de pull (puxar) as atualizações do repositório fork ou de um branch do próprio repositório
 
-- Basta vocês executarem o comando `git pull`, ele irá puxar todas as alterações feitas no repositório do Github para o seu repositório local
+- Para puxar uma atualizar feita no projeto principal basda dar um pull request
+
+- Dê o comando `git pull`, ele irá puxar todas as alterações feitas no repositório do Github para o seu repositório local
 
 ## Fork
 
-Mas Rafa quando eu fiz o clone do seu repositório ele não apareceu no meu Github.
-Existe a ferramenta `fork`, que é bem mais simples para fazer isso
-Você só precisa apertar nesse botão dentro do repositório e TCHANAM! Ele aparece automaticamente lá na sua conta:
+    - A ferramenta `fork`, nada mais é que uma cópia de um repositório. Esta cópia vira um clone do estado atual do repositório, fazendo assim com que você possa experimentar mudanças e feature novas sem precisar utilizar o repositório principal.
 
-<img src="https://media.discordapp.net/attachments/831974152667398214/836826687634407434/unknown.png">
+  <img src="https://media.discordapp.net/attachments/831974152667398214/836826687634407434/unknown.png">
 
 ## Pull request
 
-O último conceito que quero ensinar para vocês é o de Pull Request, vamos entender como ele funciona:
+    O pull request, é o pedido para que o repositório original, ou uma branch do repositório original, faça a ação de pull (puxar) as atualizações do repositório fork ou de um branch do próprio repositório
 
-- Após você ter dado um fork no projeto e ele ter ido pra sua conta, você poderá alterar o projeto e adicionar as funcionalidades que deseja
-
-- Você pode por exemplo dar um fork no meu repositório de `Formulário` para adicionar uma validação de campos ou qualquer outra coisa que acha válido
+- Após ter dado um fork no projeto e ele ter ido pra sua conta, você poderá alterar o projeto e adicionar as funcionalidades que deseja
 
 - Depois disso, você poderá salvar o projeto, dar o `git add .`, `git commit -m "validação de botões"` e `git push origin main`
 
-Quando você for olhar o seu Github, verá que existe uma mensagem parecida com a seguinte:
+- No seu Github, haverá uma mensagem parecida com a seguinte:
 
-<img src="https://media.discordapp.net/attachments/831974152667398214/838990983852458035/unknown.png">
+  <img src="https://media.discordapp.net/attachments/831974152667398214/838990983852458035/unknown.png">
 
-Isso significa que a branch do seu repositório está 1 commit "na frente" da branch original
+- Isso significa que a branch do seu repositório está 1 commit "na frente" da branch original
 
-O que você deve perceber agora é esse botão que aparece em seguida:
+- Haverá um botão que aparece em seguida
 
-<img src="https://media.discordapp.net/attachments/831974152667398214/838991711249235998/unknown.png">
+  <img src="https://media.discordapp.net/attachments/831974152667398214/838991711249235998/unknown.png">
 
-Ele servirá para caso você deseje enviar para o dono do repositório original uma solicitação de pull, ou seja, fazer com que ele puxe as alterações que você fez no seu repositório para o repositório dele, original
+- Ele serve para você enviar para o dono do repositório original uma solicitação de pull, ou seja, fazer com que ele puxe as alterações que você fez no seu repositório para o repositório dele, original
 
-Ao clicar nesse botão, você será direcionado para uma página que fará a avaliação se esse `pull request` terá conflitos ou não com o código no repositório original. Caso não tenha, bastão clicar no botão de `Create pull request`
+- Ao clicar no botão, você será direcionado para uma página que fará a avaliação se esse `pull request` terá conflitos ou não com o código no repositório original. Caso não tenha, bastão clicar no botão de `Create pull request`
 
-<img src="https://media.discordapp.net/attachments/831974152667398214/838992584893399100/unknown.png">
+  <img src="https://media.discordapp.net/attachments/831974152667398214/838992584893399100/unknown.png">
 
-Você irá colocar um nome intuitivo, que demonstre a funcionalidade adicionada e o ideal é que você também crie uma boa descrição do que desenvolveu, não somente explicando o que é, mas ensinando ao dono do repositório original a forma como ele poderá testar também
+  - Você irá colocar um nome intuitivo, que demonstre a funcionalidade adicionada e o ideal é que você também crie uma boa descrição do que desenvolveu, não somente explicando o que é, mas ensinando ao dono do repositório original a forma como ele poderá testar também
 
-Depois disso, basta esperar para que o dono da branch original aceite o seu pull request
+- Depois disso, basta esperar para que o dono da branch original aceite o seu pull request
 
 ## Finalização
 
 Existem diversas outras funcionalidades do Git e do Github, porém tenho certeza que com tudo isso que vocês viram hoje vocês já conseguem desenvolver um projeto de uma forma bem legal
 
 Recomendo sempre vocês darem uma olhada na [documentação do Git](https://git-scm.com/doc), pois qualquer dúvida que apareça pode ser respondida por lá na explicação
-
-**Não esqueçam de deixar o like e se inscrever no [canal do Youtube](https://youtube.com/RafaellaBallerini) ❤**
-
-Até semana que vem, um beijo!
